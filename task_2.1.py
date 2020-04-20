@@ -23,7 +23,7 @@ while True:
     # Определяем операцию над числами
     op_dic = ("+", "-", "*", "/")
     while True:
-        op = input("Введите совершаемую на числами операцию в виде команды: + , - , / , * \n")
+        op = input("Введите совершаемую над числами операцию в виде команды: + , - , / , * \n")
         fl = False
         for i in op_dic:
             if op == i:
@@ -43,11 +43,12 @@ while True:
         calc = num1 - num2
     elif op == "*":
         calc = num1 * num2
-    elif num2 != 0:
-        calc = num1 / num2
     else:
-        fl2 = False
-        print("Деление на ноль невозможно!")
+        try:
+            calc = num1 / num2
+        except ZeroDivisionError:
+            fl2 = False
+            print("Деление на ноль невозможно!")
 
     # Вывод результата
     if fl2:
