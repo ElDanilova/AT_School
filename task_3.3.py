@@ -6,7 +6,7 @@ def season (n):
         return ("весна")
     elif n == 6 or n == 7 or n == 8:
         return ("лето")
-    else:
+    elif n == 9 or n == 10 or n == 11:
         return ("осень")
 
 # Программа
